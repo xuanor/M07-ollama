@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane styleClass="chatbot-root" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.Controller">
+   <children>
+      <!-- HBox para el título y el perfil del usuario -->
+      <HBox alignment="CENTER_LEFT" spacing="10.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="20.0">
+         <!-- Logo de IA -->
+         <ImageView fx:id="logoImage" fitHeight="30.0" fitWidth="30.0">
+            <image>
+               <Image url="@/assets/logo.png" /> <!-- Cambia esta ruta a donde tengas tu logo -->
+            </image>
+         </ImageView>
+         <!-- Título del Chatbot -->
+         <Text text="SenpAI" wrappingWidth="204.3830623626709">
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </Text>
+      </HBox>
+      
+      <!-- HBox para el perfil del usuario -->
+      <HBox alignment="CENTER_RIGHT" spacing="10.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="10.0" styleClass="user-box">
+         <!-- Imagen de perfil -->
+         <ImageView fx:id="profileImage" fitHeight="20.0" fitWidth="20.0">
+            <image>
+               <Image url="@/assets/user_profile.png" /> 
+            </image>
+         </ImageView>
+         <!-- Nombre del usuario -->
+         <Label styleClass="user-name" text="user" />
+      </HBox>
+      
+      <!-- ScrollPane para mensajes -->
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" prefHeight="334.0" prefWidth="640.0" style="-fx-background-color: white;" styleClass="scroll-pane" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="60.0">
+         <content>
+            <VBox fx:id="chatBox" spacing="10.0" styleClass="chat-box" />
+         </content>
+      </ScrollPane>
+
+      <ProgressIndicator fx:id="progressIndicator" prefHeight="40.0" prefWidth="120.0" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="85.0" />
+      
+      <!-- Campo de texto para ingresar mensaje -->
+      <TextField fx:id="textField" prefHeight="40.0" prefWidth="554.0" promptText="Escribe un mensaje..." styleClass="input-field" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="104.0" />
+      
+      <!-- Botón para enviar mensaje -->
+      <Button fx:id="sendButton" onAction="#sendMessage" prefHeight="40.0" prefWidth="82.0" styleClass="send-button" text="Enviar" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="16.0" />
+      
+      <!-- Botón para subir imagen -->
+      <Button fx:id="uploadImageButton" onAction="#uploadImage" prefHeight="30.0" prefWidth="120.0" styleClass="upload-button" text="Subir Imagen" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="16.0" />
+
+      <!-- Botón para detener la ejecución -->
+      <Button fx:id="stopButton" onAction="#stopExecution" prefHeight="40.0" prefWidth="81.0" styleClass="stop-button" text="Detener" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="16.0" />
+   </children>
+</AnchorPane>

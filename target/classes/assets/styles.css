@@ -1,0 +1,78 @@
+.chatbot-root {
+    -fx-background-color: #f4f4f9;
+}
+
+.chat-box {
+    -fx-padding: 10;
+    -fx-background-color: white;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.input-field {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 20;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+.send-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.send-button:hover {
+    -fx-background-color: #45a049;
+}
+
+
+.stop-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+
+.chat-message {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.bot-message {
+    -fx-background-color: #d1ecf1;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.upload-button {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.user-box{
+    -fx-border-radius: 10;
+    -fx-padding: 10;
+}
+
+.user-box:hover{
+    -fx-background-color: #e0e0e0;
+}
+
+.stop-button:hover, .upload-button:hover {
+    -fx-opacity: 0.85;
+}
+
+
+
